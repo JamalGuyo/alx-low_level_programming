@@ -6,16 +6,11 @@
  */
 int main(void)
 {
-	char a = 'a';
-	char z = 'z';
+	char a;
 
-	while (a <= z)
+	for (a = 'a'; a <= 'z'; a++)
 	{
-		if (a == 'e')
-		{
-			continue;
-		}
-		else if (a == 'q')
+		if (a == 'q' || a == 'e')
 		{
 			continue;
 		}
@@ -23,7 +18,6 @@ int main(void)
 		{
 			putchar(a);
 		}
-		a++;
 	}
 	putchar('\n');
 	return (0);
