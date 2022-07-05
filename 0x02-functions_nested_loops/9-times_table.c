@@ -13,7 +13,15 @@ void times_table(void)
 	{
 		for (cols = 0; cols <= 9; cols++)
 		{
-			printf("%d,  ", (cols * rows));
+			int mult = cols * rows;
+			if(mult <= 9)
+			{
+				printf("%d,  ", mult);
+			}
+			else
+			{
+				printf("%d, ", mult);
+			}
 		}
 		putchar('\n');
 	}
