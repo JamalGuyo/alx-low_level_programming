@@ -21,6 +21,10 @@ void times_table(void)
 				{
 					printf("  %d,", mult);
 				}
+				else if (cols == 9)
+				{
+					printf("  %d", mult);
+				}
 				else
 				{
 					printf("%d,", mult);
@@ -31,6 +35,10 @@ void times_table(void)
 				if (cols != 0)
 				{
 					printf(" %d,", mult);
+				}
+				else if (cols == 9)
+				{
+					printf(" %d", mult);
 				}
 				else
 				{
