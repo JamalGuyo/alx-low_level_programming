@@ -16,11 +16,25 @@ void times_table(void)
 			int mult = cols * rows;
 			if(mult <= 9)
 			{
-				printf("%d,  ", mult);
+				if(cols != 9)
+				{
+					printf("%d,  ", mult);
+				}
+				else
+				{
+					printf("  %d", mult);
+				}
 			}
 			else
 			{
-				printf("%d, ", mult);
+				if (cols != 9)
+				{
+					printf("%d, ", mult);
+				}
+				else
+				{
+					printf(" %d", mult);
+				}
 			}
 		}
 		putchar('\n');
