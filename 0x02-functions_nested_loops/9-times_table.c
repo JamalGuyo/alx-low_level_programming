@@ -15,9 +15,37 @@ void times_table(void)
 		{
 			int mult = cols * rows;
 
-			custom_if(mult, cols);
+			if (mult <= 9)
+			{
+				if (cols != 0 && cols != 9)
+				{
+					printf("  %d,", mult);
+				}
+				else if (cols == 9)
+				{
+					printf("  %d", mult);
+				}
+				else
+				{
+					printf("%d,", mult);
+				}
+			}
+			else
+			{
+				if (cols != 0 && cols != 9)
+				{
+					printf(" %d,", mult);
+				}
+				else if (cols == 9)
+				{
+					printf(" %d", mult);
+				}
+				else
+				{
+					printf("%d,", mult);
+				}
+			}
 		}
 		putchar('\n');
 	}
-
 }
