@@ -19,11 +19,11 @@ void times_table(void)
 			{
 				if (cols != 9)
 				{
-					printf("%d, ", mult);
+					printf("%d,  ", mult);
 				}
 				else
 				{
-					printf(" %d", mult);
+					printf("  %d", mult);
 				}
 			}
 			else
