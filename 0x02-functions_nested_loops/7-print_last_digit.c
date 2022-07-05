@@ -22,5 +22,6 @@ int print_last_digit(int num)
 	{
 		lastDigit = num % 10;
 	}
+	_putchar(lastDigit);
 	return (lastDigit);
 }
