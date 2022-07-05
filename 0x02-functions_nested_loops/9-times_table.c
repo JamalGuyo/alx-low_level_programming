@@ -17,11 +17,11 @@ void times_table(void)
 
 			if (mult <= 9)
 			{
-				if (cols != 0)
+				if (rows != 0)
 				{
 					printf("  %d,", mult);
 				}
-				else if (cols == 9)
+				else if (rows == 9)
 				{
 					printf("  %d", mult);
 				}
@@ -32,11 +32,11 @@ void times_table(void)
 			}
 			else
 			{
-				if (cols != 0)
+				if (rows != 0)
 				{
 					printf(" %d,", mult);
 				}
-				else if (cols == 9)
+				else if (rows == 9)
 				{
 					printf(" %d", mult);
 				}
