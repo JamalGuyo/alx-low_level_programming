@@ -17,24 +17,24 @@ void times_table(void)
 
 			if (mult <= 9)
 			{
-				if (cols != 9)
+				if (cols != 0)
 				{
-					printf("%d,  ", mult);
+					printf("  %d,", mult);
 				}
 				else
 				{
-					printf("  %d", mult);
+					printf("%d,", mult);
 				}
 			}
 			else
 			{
-				if (cols != 9)
+				if (cols != 0)
 				{
-					printf("%d, ", mult);
+					printf(" %d,", mult);
 				}
 				else
 				{
-					printf(" %d", mult);
+					printf("%d,", mult);
 				}
 			}
 		}
