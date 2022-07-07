@@ -7,15 +7,15 @@
  */
 int _isupper(int c)
 {
-	int a = 'a';
+	int a = 'A';
 
-	while (a <= 'z')
+	while (a <= 'Z')
 	{
 		if (c == a)
 		{
-			return (0);
+			return (1);
 		}
 		a++;
 	}
-	return (1);
+	return (0);
 }
