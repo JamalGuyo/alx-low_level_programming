@@ -8,8 +8,9 @@
  */
 int main(void)
 {
-    print_line(0);
-    print_line(-1);
-    print_line(10);
+    print_diagonal(0);
+    print_diagonal(2);
+    print_diagonal(10);
+    print_diagonal(-4);
     return (0);
 }
