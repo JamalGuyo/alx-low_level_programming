@@ -7,7 +7,7 @@
  */
 int _isupper(int c)
 {
-	char a = 'a';
+	int a = 'a';
 
 	while (a <= 'z')
 	{
