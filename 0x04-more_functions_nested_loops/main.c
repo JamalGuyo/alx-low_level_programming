@@ -10,9 +10,9 @@ int main(void)
 {
     char c;
 
-    c = 'y';
-    printf("%c: %d\n", c, _isupper(c));
-    c = 'Z';
-    printf("%c: %d\n", c, _isupper(c));
+    c = '0';
+    printf("%c: %d\n", c, _isdigit(c));
+    c = 'a';
+    printf("%c: %d\n", c, _isdigit(c));
     return (0);
 }
