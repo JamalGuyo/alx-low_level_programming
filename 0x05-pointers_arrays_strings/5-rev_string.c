@@ -8,11 +8,13 @@
  */
 void rev_string(char *s)
 {
-	int i;
+	int i, j;
+	char *sCpy = s;
 
 	for (i = strlen(s) - 1; i >= 0; i--)
 	{
-		_putchar(s[i]);
+		for(j = 0; j >= i; j++)
+		{
+
 	}
-	_putchar('\n');
 }
