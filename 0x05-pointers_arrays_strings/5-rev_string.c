@@ -1,20 +1,29 @@
-#include <string.h>
 #include "main.h"
 
 /**
- * rev_string - fn to rev string
- * @s: parameter string
+ * rev_string - reverse string
+ * @s: string
  * Return: void
  */
+
 void rev_string(char *s)
 {
-	int i, j;
-	char *sCpy = s;
+	int i, max, half;
+	char first, last;
 
-	for (i = strlen(s) - 1; i >= 0; i--)
+	i = 0;
+	while (s[i] != '\0')
 	{
-		for(j = 0; j >= i; j++)
-		{
-
+		i++;
+	}
+	max = i - 1;
+	half = max / 2;
+	while (half >= 0)
+	{
+		first = s[max - half];
+		last = s[half];
+		s[half] = first;
+		s[max - half] = last;
+		half--;
 	}
 }
