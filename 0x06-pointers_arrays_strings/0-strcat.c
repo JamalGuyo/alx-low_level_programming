@@ -8,6 +8,7 @@
  */
 char *_strcat(char *dest, char *src)
 {
+
 	int destLen = strlen(dest);
 
 	int combined_len = destLen + strlen(src) + 1;
