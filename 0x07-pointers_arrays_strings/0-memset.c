@@ -1,3 +1,4 @@
+#include <string.h>
 
 /**
  * *_memset - fn to set mem
@@ -10,9 +11,12 @@ char *_memset(char *s, char b, unsigned int n)
 {
 	int i;
 
-	for (i = 0; i < n; i++)
+	if (n > 0)
 	{
-	s[i] = b;
+		for (i = 0; i < n; i++)
+		{
+			s[i] = b;
+		}
 	}
 	return (s);
 }
