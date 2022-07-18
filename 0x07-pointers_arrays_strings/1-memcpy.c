@@ -3,7 +3,7 @@
  * @dest: string to copy to
  * @src: string to copy from
  * @n: unsigned int
- * Return: string
+ * Return: pointer to dest
  */
 char *_memcpy(char *dest, char *src, unsigned int n)
 {
