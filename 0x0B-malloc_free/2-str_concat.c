@@ -57,7 +57,7 @@ char *_if(char *s1, char *s2)
 	{
 		return (s2);
 	}
-	else if (s2 == NULL)
+	else
 	{
 		return (s1);
 	}
