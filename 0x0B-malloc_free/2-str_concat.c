@@ -2,6 +2,7 @@
 #include <stdlib.h>
 #include <string.h>
 
+char *_if(char *s1, char *s2);
 /**
  * str_concat - fn to concat two strings
  * @s1: first string
@@ -17,36 +18,47 @@ char *str_concat(char *s1, char *s2)
 	s2_len = strlen(s2);
 
 	/* check if s1 and s2 are null */
-	if (s1 == NULL && s2 == NULL)
-	{
-		return (NULL);
-	}
-
+	_if(s1, s2);
 	/* allocate memory for the concatenated string */
 	p_scat = malloc((sizeof(char)) * (s1_len + s2_len + 1));
-
 	/* check if memory is available */
 	if (p_scat == NULL)
 	{
 		return (NULL);
 	}
-
 	/* loop through s1 and add to p_scat */
 	for (i = 0; s1[i] != '\0'; i++)
 	{
 		p_scat[i] = s1[i];
 	}
-
 	/* loop through s2 and add to p_scat */
 	for (j = 0; s2[j] != '\0'; j++)
 	{
 		p_scat[(i + j)] = s2[j];
 	}
-
 	/* add the string null termanitor */
 	p_scat[(s1_len + s2_len + 1)] = '\0';
-
 	return (p_scat);
+}
 
-
+/**
+ * _if - fn to check if else
+ * @s1: string param
+ * @s2: string param
+ * Return: char
+ */
+char *_if(char *s1, char *s2)
+{
+	if (s1 == NULL && s2 == NULL)
+	{
+		return (NULL);
+	}
+	else if (s1 == NULL)
+	{
+		return (s2);
+	}
+	else if (s2 == NULL)
+	{
+		return (s1);
+	}
 }
