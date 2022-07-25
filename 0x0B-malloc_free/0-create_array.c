@@ -15,15 +15,12 @@ char *create_array(unsigned int size, char c)
 	{
 	return (NULL);
 	}
-	else
-	{
-	int i;
+	unsigned int i;
 
 	while (i < size)
 	{
 	p_mem[i] = c;
 	i++;
-	}
 	}
 	return (p_mem);
 
