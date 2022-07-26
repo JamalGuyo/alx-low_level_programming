@@ -20,7 +20,6 @@ int **alloc_grid(int width, int height)
 
 	if (my_array == NULL)
 	{
-		free(my_array);
 		return (NULL);
 	}
 
@@ -31,7 +30,6 @@ int **alloc_grid(int width, int height)
 
 		if (my_array[i] == NULL)
 		{
-			free(my_array[i]);
 			return (NULL);
 		}
 
@@ -40,10 +38,7 @@ int **alloc_grid(int width, int height)
 		{
 			my_array[i][j] = 0;
 		}
-		free(my_array[i]);
 	}
-
-	free(my_array);
 
 	return (my_array);
 }
