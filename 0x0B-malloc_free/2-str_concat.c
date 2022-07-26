@@ -2,7 +2,6 @@
 #include <stdlib.h>
 #include <string.h>
 
-char *_if(char *s1, char *s2);
 /**
  * str_concat - fn to concat two strings
  * @s1: first string
@@ -14,11 +13,20 @@ char *str_concat(char *s1, char *s2)
 	char *p_scat;
 	int i, j, s1_len, s2_len;
 
+
+	/* check if s1 and s2 are null */
+	if (!s1)
+	{
+		s1 = "";
+	}
+	if (!s2)
+	{
+		s2 = "";
+	}
+
 	s1_len = strlen(s1);
 	s2_len = strlen(s2);
 
-	/* check if s1 and s2 are null */
-	_if(s1, s2);
 	/* allocate memory for the concatenated string */
 	p_scat = malloc((sizeof(char)) * (s1_len + s2_len + 1));
 	/* check if memory is available */
@@ -41,24 +49,3 @@ char *str_concat(char *s1, char *s2)
 	return (p_scat);
 }
 
-/**
- * _if - fn to check if else
- * @s1: string param
- * @s2: string param
- * Return: char
- */
-char *_if(char *s1, char *s2)
-{
-	if (s1 == NULL && s2 == NULL)
-	{
-		return (NULL);
-	}
-	else if (s1 == NULL)
-	{
-		return (s2);
-	}
-	else
-	{
-		return (s1);
-	}
-}
