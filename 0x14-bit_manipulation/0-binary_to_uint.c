@@ -33,7 +33,9 @@ unsigned int binary_to_uint(const char *b)
 	/* printf("%i\n", str_l); */
 
 	if (b == NULL)
-	return (0);
+	{
+		return (0);
+	}
 	for (i = 0; i < str_l; i++)
 	{
 	/* printf("%d\n", (int)(pow(2, i))); */
