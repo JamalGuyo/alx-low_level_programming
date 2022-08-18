@@ -25,17 +25,18 @@ unsigned int _pow(unsigned int base, unsigned int p)
   */
 unsigned int binary_to_uint(const char *b)
 {
-	/* get length of str */
-	unsigned int i, sum;
-	unsigned int str_l = strlen(b);
-
-	sum = 0;
-	/* printf("%i\n", str_l); */
+	unsigned int i, sum, str_l;
 
 	if (b == NULL)
 	{
 		return (0);
 	}
+
+	str_l = strlen(b);
+
+	sum = 0;
+	/* printf("%i\n", str_l); */
+
 	for (i = 0; i < str_l; i++)
 	{
 	/* printf("%d\n", (int)(pow(2, i))); */
@@ -44,7 +45,7 @@ unsigned int binary_to_uint(const char *b)
 	{
 	return (0);
 	}
-	sum = sum + ((int) _pow(2, i) * (b[str_l - 1 - i] - '0'));
+	sum = sum + ((unsigned int) _pow(2, i) * (b[str_l - 1 - i] - '0'));
 	}
 	return (sum);
 }
