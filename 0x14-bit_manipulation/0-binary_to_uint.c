@@ -1,7 +1,23 @@
 #include <stdio.h>
-#include <math.h>
 #include <string.h>
 
+/**
+ * _pow - custom pow fn
+ * @base: base of power calc
+ * @p: power to raise base to
+ * Return: result of pow calc
+ */
+unsigned int _pow(unsigned int base, unsigned int p)
+{
+	if (p != 0)
+	{
+		return (base * _pow(base, p - 1));
+	}
+	else
+	{
+		return (1);
+	}
+}
 /**
   * binary_to_uint - fn to convert binary to decimal
   *@b: char str containing the bits
@@ -26,7 +42,7 @@ unsigned int binary_to_uint(const char *b)
 	{
 	return (0);
 	}
-	sum = sum + ((int) pow(2, i) * (b[str_l - 1 - i] - '0'));
+	sum = sum + ((int) _pow(2, i) * (b[str_l - 1 - i] - '0'));
 	}
 	return (sum);
 }
